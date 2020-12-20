@@ -28,6 +28,7 @@ const initModels = (sequelize) => {
     hipchat_alert: Sequelize.BOOLEAN,
     alerts_enabled: Sequelize.BOOLEAN,
     telephone_alert: Sequelize.BOOLEAN,
+    is_public: Sequelize.BOOLEAN,
   }, {
     timestamps: false,
     tableName: 'cabotapp_service',
@@ -241,6 +242,7 @@ const createServices = (dataConfig) => {
       hipchat_alert: false,
       alerts_enabled: true,
       telephone_alert: false,
+      is_public: false,
     }, s)
 
     return Service.create(data).then((saved) => {
