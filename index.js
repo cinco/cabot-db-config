@@ -123,9 +123,9 @@ const initModels = (sequelize) => {
 
 const mapCheckType = (type) => {
   if (type === 'http') {
-    return 32
+    return 21
   }
-  return 34
+  return 22
 }
 
 const createChecks = (dataInstance, savedInstance, savedService) => {
